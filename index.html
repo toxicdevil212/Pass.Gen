@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3VIL Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Header -->
+  <header class="main-header">
+    <h1>D3VIL PASSWORD GENERATOR WEBSITE</h1>
+  </header>
+
+  <div class="container">
+    <h1>Dynamic Wordlist Generator</h1>
+    <form id="passwordForm">
+      <!-- Name Input -->
+      <div class="input-group">
+        <input type="checkbox" id="useName" name="useName" checked>
+        <label for="name">Include Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+      </div>
+
+      <!-- Symbols Input -->
+      <div class="input-group">
+        <input type="checkbox" id="useSymbols" name="useSymbols">
+        <label for="symbols">Include Symbols:</label>
+        <input type="text" id="symbols" name="symbols" placeholder="Enter symbols">
+      </div>
+
+      <!-- Numbers Input -->
+      <div class="input-group">
+        <input type="checkbox" id="useNumbers" name="useNumbers">
+        <label for="numbers">Include Numbers:</label>
+        <input type="text" id="numbers" name="numbers" placeholder="Enter numbers">
+      </div>
+
+      <!-- Amount of Passwords -->
+      <div class="input-group">
+        <label for="amount">Number of Passwords:</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" min="1" max="100" required>
+      </div>
+
+      <button type="button" class="button" id="generateBtn">Generate Passwords</button>
+      <button type="button" class="button" id="resetBtn">Reset</button>
+    </form>
+
+    <div id="generatedPasswords"></div>
+    <button id="downloadBtn" style="display:none;">Download as .txt</button>
+    <button id="copyBtn" style="display:none;">Copy to Clipboard</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
